@@ -2,8 +2,6 @@ Babysitter Kata
 ===============
 > The kata for sitters of babies.
 
-[![License][img-license]](LICENSE.md)
-
 Install
 -------
 Open a console window and then from the project root enter:
@@ -39,4 +37,6 @@ Open a console window and then from the project root enter:
 npm test
 ```
 
-[img-license]: https://img.shields.io/github/license/jbenner-radham/babysitter-kata.svg
+License
+-------
+This project is licensed under the terms of the [MIT License](http://opensource.org/licenses/MIT). You can view the full license [here](LICENSE).
