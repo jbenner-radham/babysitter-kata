@@ -1,7 +1,7 @@
 {
   "name": "@radioactivehamster/babysitter-kata",
-  "version": "0.0.0",
-  "description": "",
+  "version": "0.1.2",
+  "description": "The kata for sitters of babies.",
   "main": "app.js",
   "scripts": {
     "test": "mocha"
