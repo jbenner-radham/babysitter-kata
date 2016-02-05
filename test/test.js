@@ -28,4 +28,8 @@ describe('Hourly Pay', () => {
     it('Should be paid $12/hour from start-time to bedtime.', () => {
          assert.equal(HourlyPay.startTimeToBedtimeWage, 12)
     })
+
+    it('Should be paid $8/hour from bedtime to midnight.', () => {
+         assert.equal(HourlyPay.bedtimeToMidnightWage, 8)
+    })
 })

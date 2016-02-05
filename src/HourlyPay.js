@@ -11,5 +11,8 @@
  */
 module.exports = {
     /** @type {number} */
-    startTimeToBedtimeWage: 12
+    startTimeToBedtimeWage: 12,
+
+    /** @type {number} */
+    bedtimeToMidnightWage: 8
 }
