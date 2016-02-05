@@ -20,12 +20,10 @@ module.exports = class Babysitter {
     }
 
     /**
-     * > gets paid for full hours (no fractional hours)
+     * @param {number} time
      */
-    roundWorkedHours() {
-        this.start = Math.round(this.start)
-        this.end   = Math.round(this.end)
-        this.bed   = Math.round(this.bed)
+    isDuringStartTimeToBedtime(time) {
+        return time >= this.start && time < this.bed
     }
 
     /**
@@ -35,6 +33,15 @@ module.exports = class Babysitter {
      */
     leavesNoLaterThan4am() {
         return this.end <= 4.00
+    }
+
+    /**
+     * > gets paid for full hours (no fractional hours)
+     */
+    roundWorkedHours() {
+        this.start = Math.round(this.start)
+        this.end   = Math.round(this.end)
+        this.bed   = Math.round(this.bed)
     }
 
     /**
