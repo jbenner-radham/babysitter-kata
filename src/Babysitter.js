@@ -26,6 +26,10 @@ module.exports = class Babysitter {
         return time >= this.bed && time < 24.00
     }
 
+    isDuringMidnightToEndOfJob(time) {
+        return time == 24.00 || (time >= 1.00 && time <= this.end)
+    }
+
     /**
      * @param {number} time
      */
