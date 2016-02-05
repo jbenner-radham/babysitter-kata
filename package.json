@@ -1,0 +1,14 @@
+{
+  "name": "@radioactivehamster/babysitter-kata",
+  "version": "0.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "James Benner <james.benner@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  }
+}
