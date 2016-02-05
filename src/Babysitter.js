@@ -19,6 +19,16 @@ module.exports = class Babysitter {
         this.start = times.start
         this.end   = times.end
         this.bed   = times.bed
+
+        if (!this.startsNoEarlierThan5pm()) {
+            console.error('The babysitter should start no earlier than 5pm (17:00).')
+            process.exit(1)
+        }
+
+        if (!this.leavesNoLaterThan4am()) {
+            console.error('The babysitter should leave no later than 4am (04:00).')
+            process.exit(1)
+        }
     }
 
     /**
