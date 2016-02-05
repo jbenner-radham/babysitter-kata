@@ -5,7 +5,7 @@ let Babysitter = require('../src/Babysitter')
 let HourlyPay  = require('../src/HourlyPay')
 
 describe('Babysitter', () => {
-    let times      = { start: 18.01, bed: 20.00, end: 3.50 }
+    let times      = require('./times.json')
     let babysitter = new Babysitter(times);
 
     it('Should start no earlier than 5:00PM (17:00).', () => {
