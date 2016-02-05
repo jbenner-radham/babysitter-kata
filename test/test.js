@@ -3,6 +3,7 @@
 let assert     = require('assert')
 let Babysitter = require('../src/Babysitter')
 let HourlyPay  = require('../src/HourlyPay')
+let formatTime = require('../src/formatTime')
 
 describe('Babysitter', () => {
     let times      = require('./times.json')
@@ -51,5 +52,11 @@ describe('Hourly Pay', () => {
 
     it('Should be paid $16/hour from midnight to end of job.', () => {
          assert.equal(HourlyPay.midnightToEndOfJobWage, 16)
+    })
+})
+
+describe('Time', () => {
+    it('Should convert a number to the equivalent "military time" format.', () => {
+        assert.equal(formatTime(4), '04:00')
     })
 })

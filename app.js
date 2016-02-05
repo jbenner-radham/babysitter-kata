@@ -3,6 +3,7 @@
 // Modules
 let Babysitter = require('./src/Babysitter')
 let HourlyPay  = require('./src/HourlyPay')
+let formatTime = require('./src/formatTime')
 let sprintf    = require('sprintf-js').sprintf
 
 // Vars
@@ -22,8 +23,8 @@ for (let hour of hours) {
     }
 }
 
-console.info('Start-time: ' + sprintf('%.2f', times.start))
-console.info('Bedtime:    ' + sprintf('%.2f', times.bed))
-console.info('End of Job: ' + sprintf('%.2f', times.end))
+console.info('Start-time: ' + formatTime(times.start))
+console.info('Bedtime:    ' + formatTime(times.bed))
+console.info('End of Job: ' + formatTime(times.end))
 console.info('-----------------')
-console.info(`Total Pay:  $${pay}`)
+console.info(`Total Pay:   $${pay}`)
