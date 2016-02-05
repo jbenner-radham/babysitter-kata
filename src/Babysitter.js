@@ -22,6 +22,13 @@ module.exports = class Babysitter {
     /**
      * @param {number} time
      */
+    isDuringBedtimeToMidnight(time) {
+        return time >= this.bed && time < 24.00
+    }
+
+    /**
+     * @param {number} time
+     */
     isDuringStartTimeToBedtime(time) {
         return time >= this.start && time < this.bed
     }

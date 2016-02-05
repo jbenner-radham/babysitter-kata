@@ -27,6 +27,10 @@ describe('Babysitter', () => {
         assert(babysitter.isDuringStartTimeToBedtime(18.00))
     })
 
+    it('Should verify if we are working during bedtime to midnight.', () => {
+        assert(babysitter.isDuringBedtimeToMidnight(times.bed))
+    })
+
     it('Hours worked should be a collection of numbers.', () => {
         babysitter.getHoursWorked().forEach(hour => assert(!isNaN(hour)))
     })
