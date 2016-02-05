@@ -1,6 +1,6 @@
 {
   "name": "@radioactivehamster/babysitter-kata",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "The kata for sitters of babies.",
   "main": "app.js",
   "scripts": {
@@ -11,5 +11,7 @@
   "devDependencies": {
     "mocha": "^2.4.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "sprintf-js": "^1.0.3"
+  }
 }
