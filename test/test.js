@@ -11,6 +11,10 @@ describe('Babysitter', () => {
          assert(babysitter.startsNoEarlierThan5pm())
     })
 
+    it('Should leave no later than 4:00AM (04:00).', () => {
+        assert(babysitter.leavesNoLaterThan4am())
+    })
+
     it('Should be paid for full hours (no fractional hours).', () => {
         babysitter.roundWorkedHours()
         assert.equal(babysitter.start, 18.00)

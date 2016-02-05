@@ -29,6 +29,14 @@ module.exports = class Babysitter {
     }
 
     /**
+     * > leaves no later than 4:00AM (04:00)
+     * @return {boolean}
+     */
+    leavesNoLaterThan4am() {
+        return this.end <= 4.00
+    }
+
+    /**
      * > starts no earlier than 5:00PM (17:00)
      * @return {boolean}
      */
