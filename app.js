@@ -24,6 +24,6 @@ for (let hour of hours) {
 
 console.info('Start-time: ' + sprintf('%.2f', times.start))
 console.info('Bedtime:    ' + sprintf('%.2f', times.bed))
-console.info('End of Job: ' + sprintf('%2.2f', times.end))
+console.info('End of Job: ' + sprintf('%.2f', times.end))
 console.info('-----------------')
 console.info(`Total Pay:  $${pay}`)
