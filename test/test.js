@@ -22,6 +22,10 @@ describe('Babysitter', () => {
         assert.equal(babysitter.bed, 20.00)
         assert.equal(babysitter.end, 4.00)
     })
+
+    it('Hours worked should be a collection of numbers.', () => {
+        babysitter.getHoursWorked().forEach(hour => assert(!isNaN(hour)))
+    })
 })
 
 describe('Hourly Pay', () => {

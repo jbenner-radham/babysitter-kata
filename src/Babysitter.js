@@ -30,6 +30,7 @@ module.exports = class Babysitter {
 
     /**
      * > leaves no later than 4:00AM (04:00)
+     *
      * @return {boolean}
      */
     leavesNoLaterThan4am() {
@@ -38,9 +39,30 @@ module.exports = class Babysitter {
 
     /**
      * > starts no earlier than 5:00PM (17:00)
+     *
      * @return {boolean}
      */
     startsNoEarlierThan5pm() {
         return this.start >= 17.00
+    }
+
+    /**
+     * Get an array of the hours worked.
+     *
+     * @return {number[]}
+     */
+    getHoursWorked() {
+        let hours = []
+
+        for (let hour = this.start;
+             // Break after we hit our end time.
+             hour !== (this.end + 1.00);
+             // Roll over the hours if we're at midnight or increment if not.
+             (hour == 24.00) ? hour = 1.00 : hour += 1.00
+        ) {
+            hours.push(hour)
+        }
+
+        return hours
     }
 }
