@@ -17,8 +17,6 @@ module.exports = class Babysitter {
         this.start = times.start
         this.end   = times.end
         this.bed   = times.bed
-
-        this.roundWorkedHours()
     }
 
     /**
