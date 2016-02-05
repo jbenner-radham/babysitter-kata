@@ -27,4 +27,12 @@ module.exports = class Babysitter {
         this.end   = Math.round(this.end)
         this.bed   = Math.round(this.bed)
     }
+
+    /**
+     * > starts no earlier than 5:00PM (17:00)
+     * @return {boolean}
+     */
+    startsNoEarlierThan5pm() {
+        return this.start >= 17.00
+    }
 }
