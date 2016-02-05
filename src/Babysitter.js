@@ -11,6 +11,8 @@
  */
 module.exports = class Babysitter {
     /**
+     * Class constructor
+     *
      * @param {object} times
      */
     constructor(times) {
@@ -20,18 +22,30 @@ module.exports = class Babysitter {
     }
 
     /**
+     * Is the provided time during bedtime to midnight?
+     *
      * @param {number} time
+     * @return {boolean}
      */
     isDuringBedtimeToMidnight(time) {
         return time >= this.bed && time < 24.00
     }
 
+    /**
+     * Is the provided time during midnight to the end of our job?
+     *
+     * @param {number} time
+     * @return {boolean}
+     */
     isDuringMidnightToEndOfJob(time) {
         return time == 24.00 || (time >= 1.00 && time <= this.end)
     }
 
     /**
+     * Is the provided time during our start-time to bedtime?
+     *
      * @param {number} time
+     * @return {boolean}
      */
     isDuringStartTimeToBedtime(time) {
         return time >= this.start && time < this.bed
@@ -47,12 +61,17 @@ module.exports = class Babysitter {
     }
 
     /**
+     * Rounds the classes time properties.
      * > gets paid for full hours (no fractional hours)
+     *
+     * @return {this}
      */
     roundWorkedHours() {
         this.start = Math.round(this.start)
         this.end   = Math.round(this.end)
         this.bed   = Math.round(this.bed)
+
+        return this
     }
 
     /**
